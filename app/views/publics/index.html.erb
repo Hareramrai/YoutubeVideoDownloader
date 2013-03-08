@@ -1,0 +1,19 @@
+
+<div class="page-header">
+  <h3>Video Downloader</h3>
+  <p>It will generate the link for downloading the video from youtube.</p>
+</div>
+
+<%= form_tag publics_path,:method => :post, :html => { :class => 'form-horizontal' } do  %>
+
+<div class="control-group">
+    <%= label_tag :youtube_link,'Paste Youtube Link Here' ,  :class => 'control-label' %>
+    <div class="controls">
+      <%= text_field_tag :url,nil, :class => 'text_field' %>
+    </div>
+</div>
+<div class="form-actions">
+  <%= submit_tag nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")), root_path, :class => 'btn' %>
+</div>
+<% end %>
